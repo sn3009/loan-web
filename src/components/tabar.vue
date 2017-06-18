@@ -3,25 +3,33 @@
 		<div class="tab">
 			<div class="tab-item">
 				<router-link to="/home">
-					<div class="tab-icon"><img src="../assets/images/tab_home.png" alt=""></div>
-					<div class="tab-text">首页</div>
+					<div class="tab-icon">
+						<i class="icon icon_tab">&#xe64d;</i>	
+					</div>
+					<div class="tab-text">推荐</div>
 				</router-link>
 			</div>
 			<div class="tab-item">
 				<router-link to="/sport">
-					<div class="tab-icon"><img src="../assets/images/tab_running.png" alt=""></div>
-					<div class="tab-text">约跑</div>
+					<div class="tab-icon">
+						<i class="icon icon_tab">&#xe833;</i>
+					</div>
+					<div class="tab-text">贷款</div>
 				</router-link>
 			</div>
 			<div class="tab-item">
 				<router-link to="/travel">
-					<div class="tab-icon"><img src="../assets/images/tab_travel.png" alt=""></div>
-					<div class="tab-text">约行</div>
+					<div class="tab-icon">
+						<i class="icon icon_tab">&#xe611;</i>
+					</div>
+					<div class="tab-text">攻略</div>
 				</router-link>
 			</div>
 			<div class="tab-item">
 				<router-link to="/user">
-					<div class="tab-icon"><img src="../assets/images/tab_user.png" alt=""></div>
+					<div class="tab-icon">
+						<i class="icon icon_tab">&#xe65d;</i>
+					</div>
 					<div class="tab-text">我的</div>
 				</router-link>
 			</div>
@@ -56,7 +64,7 @@ export default {
 	    display: flex;
 	    width: 100%;
 	    height: px2rem(120px);
-	    line-height: px2rem(120px);
+	    // line-height: px2rem(120px);
 	    background: #fff;
 		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 	    &:after{
@@ -74,22 +82,36 @@ export default {
 			a{
 				display: block;
 				font-size: 14px;
-					color: rgb(77, 85, 93);
+				color: rgb(77, 85, 93);
 					&.active{
 						color: #76D49B;
 						text-decoration: none;
+						.tab-icon{
+							.icon_tab{
+								color: #76D49B;
+							text-decoration: none;
+							}
+						}
 					}
 				.tab-icon{
 					width: px2rem(50px);
 					height: px2rem(50px);
 					margin: 0 auto;
-					img{
-						width: 100%;
+					// img{
+					// 	width: 100%;
+					// }
+					padding-top: px2rem(30px);
+					.icon_tab{
+						color:#333;
+						font-size:20px;
 					}
+					
 				}
+
+				
 				.tab-text{
-					height: px2rem(80px);
-					line-height: px2rem(80px);
+					height: px2rem(30px);
+					line-height: px2rem(30px);
 				}
 			}
 			

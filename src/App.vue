@@ -49,7 +49,14 @@ export default {
       // 隐藏MenuSlide
       hideMenuSlide() {
         this.setNavState(false)
+      },
+      // 禁止滚屏穿透
+      banScroll(){
+          document.querySelector('.content').addEventListener('touchmove', e => e.preventDefault());
+          console.log(11);
+
       }
+     
   },
   computed: {
       ...mapGetters([
@@ -60,13 +67,13 @@ export default {
       title () {
         switch (this.$route.path.split('/')[1]) {
             case '':
-              return "Qu约"
+              return "推荐"
             case 'home':
-              return "Qu约"
+              return "推荐"
             case 'sport':
-              return "约跑"
+              return "贷款"
             case 'travel':
-              return "约行"
+              return "攻略"
             case 'user':
               return "我的"
         }
@@ -89,6 +96,9 @@ export default {
         }
         return false
       }
+  },
+  mounted(){
+    console.log(this.$route)
   }
 }
 </script>
@@ -98,11 +108,17 @@ export default {
 
 @font-face {
   font-family: 'icon';  /* project id 172436 */
-  src: url('http://at.alicdn.com/t/font_w71lovnj7adobt9.eot');
-  src: url('http://at.alicdn.com/t/font_w71lovnj7adobt9.eot?#iefix') format('embedded-opentype'),
-  url('http://at.alicdn.com/t/font_w71lovnj7adobt9.woff') format('woff'),
-  url('http://at.alicdn.com/t/font_w71lovnj7adobt9.ttf') format('truetype'),
-  url('http://at.alicdn.com/t/font_w71lovnj7adobt9.svg#iconfont') format('svg');
+  // src: url('http://at.alicdn.com/t/font_w71lovnj7adobt9.eot');
+  // src: url('http://at.alicdn.com/t/font_w71lovnj7adobt9.eot?#iefix') format('embedded-opentype'),
+  // url('http://at.alicdn.com/t/font_w71lovnj7adobt9.woff') format('woff'),
+  // url('http://at.alicdn.com/t/font_w71lovnj7adobt9.ttf') format('truetype'),
+  // url('http://at.alicdn.com/t/font_w71lovnj7adobt9.svg#iconfont') format('svg');
+
+  src: url('//at.alicdn.com/t/font_t0qgqg37p1wz5mi.eot');
+  src: url('//at.alicdn.com/t/font_t0qgqg37p1wz5mi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_t0qgqg37p1wz5mi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_t0qgqg37p1wz5mi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_t0qgqg37p1wz5mi.svg#iconfont') format('svg');
 }
 .icon {
     font-family:"icon" !important;
@@ -130,7 +146,8 @@ a.active {
     background: #F5F5F5;
   }
   .tabar {
-    margin-bottom: px2rem(120px);
+    // margin-bottom: px2rem(120px);
+    padding-bottom: px2rem(60px);
   }
   //渐变动效
   .slide-left-enter-active,

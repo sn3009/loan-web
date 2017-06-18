@@ -1,9 +1,9 @@
 <template>
   <div class="header">
-    <div class="header-icon" v-show="backDisplay" @click="goBack"><i class="icon">&#xe622;</i></div>
+    <div class="header-icon" v-show="backDisplay" @click="goBack"><i class="icon">&#xe606;</i></div>
     <div class="header-cont"><p>{{title}}</p></div>
-    <div class="header-icon" v-show="menuDisplay" @click="showBar"><i class="icon">&#xe634;</i></div>
-    <div class="header-icon" v-show="mapDisplay" @click="getMap"><i class="icon map-icon">&#xe600;</i></div>
+    <!-- <div class="header-icon" v-show="menuDisplay" @click="showBar"><i class="icon">&#xe601;</i></div> -->
+    <!-- <div class="header-icon" v-show="mapDisplay" @click="getMap"><i class="icon map-icon">&#xe633;</i></div> -->
   </div>
 </template>
 
@@ -60,7 +60,8 @@
   
   .header-cont {
     flex: 6;
-    padding-left: px2rem(40px);
+    text-align:center;
+    // padding-left: px2rem(40px);
       >p{
         line-height: px2rem(100px);
         color: #ffffff;

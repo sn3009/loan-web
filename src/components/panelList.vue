@@ -2,14 +2,14 @@
 	<div class="travel-list">
         <div class="travel-list-head">
             <div class="head-l">
-                <i class="icon">&#xe678;</i>
+                <i class="icon">&#xe60f;</i>
                 <span>最新热门</span>
             </div>
-            <div class="head-r">
+           <!--  <div class="head-r">
                 <router-link to="">
                     <i class="icon fr">&#xe7a7;</i>
                 </router-link>
-            </div>
+            </div> -->
 		</div>
         <panel v-for="(item,index) in sportList" :sport="item" :key="item.id"></panel>
 	</div>
